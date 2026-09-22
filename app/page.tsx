@@ -6,7 +6,7 @@ const experiences = [
 
 export default function Home(){
  return <main>
-  <nav><a className="brand" href="#">ES<span>.</span></a><div className="navlinks"><a href="#experience">Expériences</a><a href="/research">Recherche</a><a href="#about">À propos</a><a className="navCta" href="/cv_elie_sanon.pdf" target="_blank">CV ↗</a></div></nav>
+  <nav><a className="brand" href="#">ES<span>.</span></a><div className="navlinks"><a href="#experience">Expériences</a><a href="/research">Recherche</a><a href="#about">À propos</a><a className="navCta" href="#contact">CV ↗</a></div></nav>
   <section className="hero">
    <div className="heroCopy"><div className="eyebrow"><i/> ML / AI ENGINEER <span>· PARIS, FR</span></div><h1>Building AI systems<br/>that <em>move beyond</em><br/>the notebook.</h1><p className="lead">Je conçois des systèmes Machine Learning et GenAI de bout en bout — de l’expérimentation à une architecture robuste, mesurable et déployable.</p><div className="actions"><a className="primary" href="#experience">Voir mes travaux <b>↘</b></a><a className="secondary" href="https://github.com/esanonpro" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
    <div className="heroVisual"><div className="orbit o1"/><div className="orbit o2"/><div className="core"><span>AI</span><small>SYSTEMS</small></div><div className="node n1">DATA</div><div className="node n2">MODEL</div><div className="node n3">EVAL</div><div className="node n4">SHIP</div></div>
