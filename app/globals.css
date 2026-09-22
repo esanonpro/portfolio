@@ -23,3 +23,6 @@
 /* V2.6 — research surfaced on homepage */
 .homeResearchWorks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.homeResearchWorks>a{border:1px solid #222b33;padding:28px;background:#090d10;transition:.25s}.homeResearchWorks>a:hover{border-color:#38564f;transform:translateY(-2px)}.homeResearchWorks small{font:8px DM Mono;color:var(--accent);letter-spacing:.08em}.homeResearchWorks h3{font-size:20px;line-height:1.35;margin:14px 0 10px}.homeResearchWorks p{font:9px DM Mono;color:#66727c;line-height:1.7;min-height:32px}.homeResearchWorks b{display:block;margin-top:22px;font:8px DM Mono;color:#8e9aa4}.homeResearchWorks>a:hover b{color:var(--accent)}.researchComing a{font:9px DM Mono;color:var(--blue)}
 @media(max-width:900px){.homeResearchWorks{grid-template-columns:1fr}}
+
+/* V2.7 — portfolio ↔ research repositories */
+.repoLink{display:inline-flex;margin-top:28px;padding:12px 16px;border:1px solid #29343d;font:9px DM Mono;letter-spacing:.08em;color:var(--accent);transition:.2s}.repoLink:hover{border-color:var(--accent);background:rgba(116,255,196,.04)}.caseBody aside a{font:9px DM Mono;color:var(--blue);margin-bottom:20px}.inlineRepo{display:inline-block;margin-top:18px;font:9px DM Mono;color:var(--accent);border-bottom:1px solid #2b4b42;padding-bottom:4px}
