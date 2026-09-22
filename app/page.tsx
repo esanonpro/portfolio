@@ -6,7 +6,7 @@ const experiences = [
 
 export default function Home(){
  return <main>
-  <nav><a className="brand" href="#">ES<span>.</span></a><div className="navlinks"><a href="#experience">Expériences</a><a href="#research">Recherche</a><a href="#about">À propos</a><a className="navCta" href="/cv.pdf">CV ↗</a></div></nav>
+  <nav><a className="brand" href="#">ES<span>.</span></a><div className="navlinks"><a href="#experience">Expériences</a><a href="/research">Recherche</a><a href="#about">À propos</a><a className="navCta" href="mailto:esanon.pro@gmail.com?subject=CV%20Elie%20Sanon">CV · sur demande ↗</a></div></nav>
   <section className="hero">
    <div className="heroCopy"><div className="eyebrow"><i/> ML / AI ENGINEER <span>· PARIS, FR</span></div><h1>Building AI systems<br/>that <em>move beyond</em><br/>the notebook.</h1><p className="lead">Je conçois des systèmes Machine Learning et GenAI de bout en bout — de l’expérimentation à une architecture robuste, mesurable et déployable.</p><div className="actions"><a className="primary" href="#experience">Voir mes travaux <b>↘</b></a><a className="secondary" href="https://github.com/esanonpro" target="_blank" rel="noreferrer">GitHub ↗</a></div></div>
    <div className="heroVisual"><div className="orbit o1"/><div className="orbit o2"/><div className="core"><span>AI</span><small>SYSTEMS</small></div><div className="node n1">DATA</div><div className="node n2">MODEL</div><div className="node n3">EVAL</div><div className="node n4">SHIP</div></div>
@@ -16,7 +16,7 @@ export default function Home(){
   <section className="strip"><span className="stripLabel">CURRENT STACK</span>{["Python","LangGraph","GCP","Vertex AI","Docker","FastAPI","TypeScript","Next.js"].map(x=><span key={x}>{x}</span>)}</section>
 
   <section id="experience" className="section"><header><div><span>01 / SELECTED WORK</span><small>2024 — 2026</small></div><h2>Expériences qui relient<br/><em>modèles et systèmes.</em></h2></header>
-   <div className="workList">{experiences.map(e=><article className="work" key={e.slug}><div className="workIndex">{e.index}</div><div className="workMain"><div className="workTop"><p>{e.company} · {e.location}</p><span>{e.period}</span></div><h3>{e.role}</h3><p className="workDesc">{e.text}</p><ul>{e.details.map(d=><li key={d}>{d}</li>)}</ul><div className="tags">{e.tags.map(t=><span key={t}>{t}</span>)}</div></div><div className="workSide"><span>{e.metric}</span><b>↗</b></div></article>)}</div>
+   <div className="workList">{experiences.map(e=><a className="work" key={e.slug} href={"/experience/"+e.slug}><div className="workIndex">{e.index}</div><div className="workMain"><div className="workTop"><p>{e.company} · {e.location}</p><span>{e.period}</span></div><h3>{e.role}</h3><p className="workDesc">{e.text}</p><ul>{e.details.map(d=><li key={d}>{d}</li>)}</ul><div className="tags">{e.tags.map(t=><span key={t}>{t}</span>)}</div></div><div className="workSide"><span>{e.metric}</span><b>↗</b></div></a>)}</div>
   </section>
 
   <section id="research" className="section research"><header><div><span>02 / RESEARCH</span><small>EXPLORE · TEST · MEASURE</small></div><h2>Une pratique d’ingénieur,<br/><em>une démarche de recherche.</em></h2></header>
