@@ -49,3 +49,8 @@
 /* V2.10 — research figures */
 .researchFigure{margin:30px 0 4px}.figureFrame{border:1px solid #253039;background:#0b1014;padding:12px;overflow:hidden}.figureFrame.light{background:#f5f5f2}.figureFrame img{display:block;width:100%;height:auto;object-fit:contain}.researchFigure figcaption{display:grid;grid-template-columns:58px 1fr;gap:14px;padding:13px 2px 0}.researchFigure figcaption span{font:8px DM Mono;color:var(--accent);letter-spacing:.08em}.researchFigure figcaption p{margin:0!important;font:9px/1.65 DM Mono!important;color:#73808a!important;max-width:760px}.resultFigure{margin-top:28px;margin-bottom:32px}
 @media(max-width:700px){.figureFrame{padding:7px}.researchFigure figcaption{grid-template-columns:1fr;gap:5px}}
+
+
+/* V2.11 — GARCH evidence gallery */
+.figurePair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}.figurePair .researchFigure{margin:0}.figurePair .figureFrame{height:100%;display:flex;align-items:center}.figureTakeaway{margin-top:18px!important;padding:16px 18px;border-left:2px solid var(--accent);background:rgba(105,240,207,.025);font:9px/1.75 DM Mono!important;color:#82909a!important}
+@media(max-width:850px){.figurePair{grid-template-columns:1fr}}
