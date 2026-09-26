@@ -54,3 +54,43 @@
 /* V2.11 — GARCH evidence gallery */
 .figurePair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}.figurePair .researchFigure{margin:0}.figurePair .figureFrame{height:100%;display:flex;align-items:center}.figureTakeaway{margin-top:18px!important;padding:16px 18px;border-left:2px solid var(--accent);background:rgba(105,240,207,.025);font:9px/1.75 DM Mono!important;color:#82909a!important}
 @media(max-width:850px){.figurePair{grid-template-columns:1fr}}
+
+
+/* V2.1 — UX/UI polish: restrained product aesthetic */
+:root{--bg:#090a0c;--panel:#0f1115;--line:#252a31;--text:#f3f5f4;--muted:#929aa3;--accent:#63e6be;--blue:#6ea8fe}
+body:before{background:radial-gradient(circle at 72% 5%,rgba(99,230,190,.045),transparent 24%),linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);background-size:auto,64px 64px,64px 64px}
+nav{height:72px}.navCta{border-color:var(--line);transition:border-color .2s ease,background .2s ease}.navCta:hover{border-color:#3b464d;background:#0e1215}
+.heroV21{min-height:610px;padding:92px 0 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:90px}
+.heroV21 h1{font-size:66px;max-width:760px;margin:24px 0}.heroV21 .lead{max-width:610px}
+.heroSignature{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:stretch;align-self:center}
+.heroSignature>div{flex:1;padding:24px 18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.heroSignature>div:first-child{padding-left:0}.heroSignature>div:last-child{padding-right:0}
+.heroSignature small{font:500 8px DM Mono;color:var(--accent);letter-spacing:.12em}
+.heroSignature b{font-size:13px;font-weight:500;color:var(--text);white-space:nowrap}
+.heroSignature span{font:8px DM Mono;color:#59636d;white-space:nowrap}
+.heroSignature>i{font:10px DM Mono;color:#3f494f;display:grid;place-items:center;font-style:normal}
+.primary{transition:transform .2s ease,filter .2s ease}.primary:hover{transform:translateY(-2px);filter:brightness(1.03)}
+.section{padding:112px 0}.section header{margin-bottom:64px}
+.work{padding:42px 0}.work:hover{padding-left:12px;background:linear-gradient(90deg,rgba(99,230,190,.022),transparent 58%)}
+.work h3{font-size:30px}.tags span{background:transparent;border-color:#22282e}
+.researchComing{border-left:0;border-right:0;background:transparent;padding:28px 0}
+.homeResearchWorks{gap:0!important;border-top:1px solid var(--line)}
+.homeResearchWorks>a{border:0!important;border-bottom:1px solid var(--line)!important;background:transparent!important;padding:34px 0!important;transition:padding .2s ease,background .2s ease}
+.homeResearchWorks>a:hover{padding-left:12px!important;background:linear-gradient(90deg,rgba(99,230,190,.02),transparent)!important}
+.caseHero{padding-top:92px}.caseHero h1{letter-spacing:-.05em}
+.contributionBand{max-width:1240px;margin:auto;border-bottom:1px solid var(--line);display:grid;grid-template-columns:260px 1fr;gap:70px;padding:28px 0}
+.contributionBand>span{font:500 9px DM Mono;color:var(--accent);letter-spacing:.12em}
+.contributionBand>p{margin:0;color:#aab2b8;font-size:13px;line-height:1.7}
+.researchMetricBand{background:#0b0d10!important}
+.scienceChart{background:#0c0f12!important}
+@media(max-width:900px){
+ .heroV21{min-height:auto;grid-template-columns:1fr;gap:48px;padding:68px 0 55px}
+ .heroV21 h1{font-size:44px}.heroSignature{overflow-x:auto}.heroSignature>div{min-width:150px}
+ .heroSignature>div:first-child{padding-left:14px}.heroSignature>div:last-child{padding-right:14px}
+ .contributionBand{margin-left:22px;margin-right:22px;grid-template-columns:1fr;gap:10px}
+}
+@media(max-width:560px){
+ .navlinks>a:not(.navCta){display:none}.heroV21 h1{font-size:39px}.lead{font-size:15px}
+ .heroSignature{display:grid;grid-template-columns:1fr}.heroSignature>i{display:none}.heroSignature>div{padding:16px 0;border-bottom:1px solid var(--line)}.heroSignature>div:last-child{border-bottom:0}
+ .section header h2,footer h2{font-size:36px}.work{grid-template-columns:34px 1fr;gap:12px}.work h3{font-size:25px}.workTop{gap:10px}.work ul{display:none}
+}
