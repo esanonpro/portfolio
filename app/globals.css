@@ -94,3 +94,25 @@ nav{height:72px}.navCta{border-color:var(--line);transition:border-color .2s eas
  .heroSignature{display:grid;grid-template-columns:1fr}.heroSignature>i{display:none}.heroSignature>div{padding:16px 0;border-bottom:1px solid var(--line)}.heroSignature>div:last-child{border-bottom:0}
  .section header h2,footer h2{font-size:36px}.work{grid-template-columns:34px 1fr;gap:12px}.work h3{font-size:25px}.workTop{gap:10px}.work ul{display:none}
 }
+
+
+/* V2.2 — signature circle, without generic AI-grid treatment */
+:root{--bg:#0c0d0f;--panel:#111316;--line:#292d31;--text:#f2f1ed;--muted:#8c9298;--accent:#5fc7a5;--blue:#7189a8}
+body:before{background:radial-gradient(circle at 78% 17%,rgba(95,199,165,.035),transparent 27%);background-size:auto}
+.heroV21{grid-template-columns:1.08fr .92fr;gap:72px}
+.heroVisualV3{height:380px;max-width:440px;width:100%;justify-self:end;opacity:.96}
+.heroVisualV3 .core{width:104px;height:104px;background:#101513;border-color:rgba(95,199,165,.68);box-shadow:0 0 34px rgba(95,199,165,.035)}
+.heroVisualV3 .o1{width:236px;height:236px;border-color:#30363a}
+.heroVisualV3 .o2{width:350px;height:350px;border-color:#242a2e;border-style:solid}
+.heroVisualV3 .node{background:var(--bg);border-color:#31373c;color:#7f878d;padding:7px 10px;letter-spacing:.08em}
+.heroVisualV3:hover{transform:none}
+.heroVisualV3:hover .core{box-shadow:0 0 42px rgba(95,199,165,.055)}
+.heroVisualV3:hover .node{border-color:#46524e;color:#a8b7b1}
+.visualCaption{position:absolute;bottom:-2px;right:0;font:500 8px DM Mono;color:#555e63;letter-spacing:.13em}
+.eyebrow i{box-shadow:none}
+em{color:#74c9ad}
+.primary{background:#dfe9e4;border-color:#dfe9e4!important;color:#101513!important}
+.primary:hover{filter:none}
+.researchComing span,.researchComing b{color:var(--accent)}
+@media(max-width:900px){.heroVisualV3{justify-self:center;max-width:420px;margin-top:0}.visualCaption{right:22px}}
+@media(max-width:560px){.heroVisualV3{height:300px;transform:scale(.82);margin:-22px auto}.heroVisualV3:hover{transform:scale(.82)}.heroVisualV3 .o2{width:330px;height:330px}.visualCaption{bottom:-8px}}
