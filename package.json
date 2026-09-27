@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cms:seed": "sanity dataset import sanity/seed/portfolio.ndjson production --replace"
   },
   "dependencies": {
     "@types/node": "^22.0.0",
