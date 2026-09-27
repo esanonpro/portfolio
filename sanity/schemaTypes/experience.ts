@@ -16,6 +16,17 @@ export const experience = defineType({
     defineField({ name: "stack", title: "Stack", type: "array", of: [{ type: "string" }] }),
     defineField({ name: "highlights", title: "Points clés", type: "array", of: [{ type: "string" }] }),
     defineField({ name: "contribution", title: "Ma contribution", type: "text", rows: 4 }),
+    defineField({ name: "detailIntro", title: "Introduction de l’étude de cas", type: "text", rows: 4 }),
+    defineField({
+      name: "sections", title: "Sections détaillées", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "number", title: "Numéro", type: "string" }),
+        defineField({ name: "title", title: "Titre", type: "string", validation: r => r.required() }),
+        defineField({ name: "text", title: "Texte", type: "text", rows: 5 }),
+        defineField({ name: "items", title: "Points", type: "array", of: [{ type: "string" }] }),
+        defineField({ name: "quote", title: "Citation / question", type: "text", rows: 4 }),
+      ], preview: { select: { title: "title", subtitle: "number" } } }]
+    }),
     defineField({ name: "published", title: "Visible sur le portfolio", type: "boolean", initialValue: true }),
   ],
   preview: { select: { title: "role", subtitle: "company" } },
