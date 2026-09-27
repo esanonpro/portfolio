@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getHomeContent } from "../../sanity/lib/content";
 
 const works = [
   {
@@ -19,7 +20,9 @@ const works = [
   },
 ];
 
-export default function Research() {
+export default async function Research() {
+  const { research } = await getHomeContent();
+  const cmsWorks = research.length ? research.map((w,i)=>({href:`/research/${w.slug.current}`,index:String(i+1).padStart(2,"0"),label:w.label || "RESEARCH",title:w.title,question:w.question || w.summary || "",tags:w.tags || []})) : works;
   return (
     <main className="casePage">
       <nav>
@@ -46,7 +49,7 @@ export default function Research() {
           <p>Deux projets de recherche appliquée : un travail sur le débruitage d’images par Transformers et une étude de calibration rapide des modèles GARCH.</p>
         </div>
         <div className="researchWorkList">
-          {works.map((work) => (
+          {cmsWorks.map((work) => (
             <Link className="researchWork" href={work.href} key={work.href}>
               <div className="researchWorkTop"><span>{work.index}</span><small>{work.label}</small><b>↗</b></div>
               <h3>{work.title}</h3>
