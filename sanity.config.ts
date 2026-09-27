@@ -8,6 +8,7 @@ import { schemaTypes } from "./sanity/schemaTypes";
 export default defineConfig({
   name: "default",
   title: "Elie Sanon Portfolio",
+  basePath: "/studio",
   projectId,
   dataset,
   plugins: [structureTool()],
