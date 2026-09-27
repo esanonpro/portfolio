@@ -2,7 +2,24 @@
   "name": "elie-sanon-portfolio",
   "version": "1.0.0",
   "private": true,
-  "scripts": {"dev":"next dev","build":"next build","start":"next start","lint":"next lint"},
-  "dependencies": {"@types/node":"^22.0.0","@types/react":"^19.0.0","@types/react-dom":"^19.0.0","next":"^15.5.0","react":"^19.1.0","react-dom":"^19.1.0","typescript":"^5.9.0"},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "next": "^16.0.0",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "typescript": "^5.9.0",
+    "@sanity/image-url": "^1.2.0",
+    "next-sanity": "^12.0.0",
+    "sanity": "^5.24.0",
+    "styled-components": "^6.1.15"
+  },
   "devDependencies": {}
 }
