@@ -1,0 +1,4 @@
+import Link from "next/link";
+export function SectionHeader({index,kicker,title}:{index:string;kicker:string;title:string}){return <header className="sectionHeader"><div><span>{index} / {kicker}</span></div><h2>{title}</h2></header>}
+export function Chip({children}:{children:React.ReactNode}){return <span className="chip">{children}</span>}
+export function Card({href,eyebrow,title,children,external=false}:{href:string;eyebrow:string;title:string;children:React.ReactNode;external?:boolean}){const body=<><div className="cardVisual" aria-hidden="true"><span>DATA</span><i>→</i><span>MODEL</span><i>→</i><span>EVAL</span><i>→</i><span>SHIP</span></div><small>{eyebrow}</small><h3>{title}</h3>{children}<b>Voir le projet <span aria-hidden="true">↗</span></b></>;return external?<a className="portfolioCard" href={href} target="_blank" rel="noreferrer">{body}</a>:<Link className="portfolioCard" href={href}>{body}</Link>}
