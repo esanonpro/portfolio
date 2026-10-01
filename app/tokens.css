@@ -1,0 +1,31 @@
+/* Portfolio design tokens — single source of truth */
+:root {
+  --color-bg: #07090b;
+  --color-surface: #0c1014;
+  --color-surface-raised: #11171c;
+  --color-border: #2b353e;
+  --color-text: #f0f4f7;
+  --color-text-secondary: #b2bbc4;
+  --color-text-tertiary: #9aa5af;
+  --color-accent: #79e6c8;
+  --color-accent-strong: #9af2d9;
+  --color-link: #9bbcff;
+  --font-sans: Inter, Arial, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+  --text-label: .875rem;
+  --text-body: 1rem;
+  --text-lead: 1.125rem;
+  --leading-body: 1.65;
+  --space-1: .5rem;
+  --space-2: .75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-section: clamp(6rem, 8vw, 8rem);
+  --content-max: 1240px;
+  --reading-max: 72ch;
+  --header-h: 64px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+}
