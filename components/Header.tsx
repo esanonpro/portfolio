@@ -1,0 +1,16 @@
+"use client";
+import {useEffect,useRef,useState} from "react";
+import Link from "next/link";
+import {site} from "../content/site";
+
+const links=[["experience","Expériences"],["projects","Projets"],["research","Recherche"],["skills","Compétences"],["contact","Contact"]] as const;
+export default function Header(){
+ const [active,setActive]=useState(""); const [open,setOpen]=useState(false); const [cmd,setCmd]=useState(false); const dialog=useRef<HTMLDivElement>(null);
+ useEffect(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setActive(e.target.id)}),{rootMargin:"-25% 0px -65%"});links.forEach(([id])=>{const e=document.getElementById(id);if(e)io.observe(e)});return()=>io.disconnect()},[]);
+ useEffect(()=>{const key=(e:KeyboardEvent)=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();setCmd(v=>!v)}if(e.key==="Escape"){setCmd(false);setOpen(false)}};window.addEventListener("keydown",key);return()=>window.removeEventListener("keydown",key)},[]);
+ useEffect(()=>{if((open||cmd)&&dialog.current){const els=[...dialog.current.querySelectorAll<HTMLElement>('a,button')];els[0]?.focus();const trap=(e:KeyboardEvent)=>{if(e.key!=="Tab"||!els.length)return;const first=els[0],last=els[els.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}};const node=dialog.current;node.addEventListener("keydown",trap);return()=>node.removeEventListener("keydown",trap)}},[open,cmd]);
+ return <><a className="skipLink" href="#main">Aller au contenu</a><header className="siteHeader"><nav aria-label="Navigation principale"><Link className="brand" href="/">ES<span>.</span></Link><div className="desktopNav">{links.map(([id,label])=><a key={id} className={active===id?"active":""} href={"/#"+id}>{label}</a>)}<button className="commandButton" onClick={()=>setCmd(true)} aria-label="Ouvrir la palette de commandes">⌘K</button><a className="navCta" href={site.cv} target="_blank" rel="noreferrer">CV ↗</a><a className="navCta primarySmall" href={"mailto:"+site.email}>Contact</a></div><button className="menuButton" aria-expanded={open} aria-controls="mobile-menu" onClick={()=>setOpen(v=>!v)}>Menu</button></nav></header>
+ {open&&<div id="mobile-menu" className="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu" ref={dialog}><button onClick={()=>setOpen(false)}>Fermer ×</button>{links.map(([id,label])=><a key={id} href={"/#"+id} onClick={()=>setOpen(false)}>{label}</a>)}<a href={site.cv} target="_blank" rel="noreferrer">CV ↗</a></div>}
+ {cmd&&<div className="commandBackdrop" role="presentation" onMouseDown={()=>setCmd(false)}><div className="commandPalette" role="dialog" aria-modal="true" aria-label="Palette de commandes" ref={dialog} onMouseDown={e=>e.stopPropagation()}><p>ALLER À</p>{links.map(([id,label])=><a key={id} href={"/#"+id} onClick={()=>setCmd(false)}>{label}<span>↵</span></a>)}<a href={site.cv} target="_blank" rel="noreferrer">Ouvrir le CV <span>↗</span></a><a href={site.github} target="_blank" rel="noreferrer">GitHub <span>↗</span></a></div></div>}
+ </>;
+}
