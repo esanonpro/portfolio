@@ -1,7 +1,7 @@
 import { getHomeContent } from "../sanity/lib/content";
 
 const experiences = [
-  {slug:"djc",period:"2026",index:"01",role:"AI Engineer",company:"Diaspora Junior Consulting",location:"Paris",text:"Système agentique d’aide à la décision sur le marché Forex.",tags:["Python","LangGraph","LLM","FastAPI","Docker","Cloud Run"],metric:"Agentic AI",details:["Analyse technique et génération de signaux","Agent d’analyse fondamentale macroéconomique","Workflow de décision, risque et exécution simulée","Backtesting déterministe vs agentique"]},
+  {slug:"djc",period:"2026",index:"01",role:"AI Engineer",company:"Diaspora Junior Consulting",location:"Paris",text:"Système hybride d’aide à la décision Forex combinant moteur technique déterministe et agent LLM d’analyse fondamentale.",tags:["Python","LangGraph","MCP","Gemini","Vertex AI","Cloud Run"],metric:"Agentic AI",details:["Analyse technique et génération de signaux","Agent fondamental Gemini via Vertex AI","Accès aux outils macro-financiers via MCP","Backtesting déterministe vs approche hybride"]},
   {slug:"datafab",period:"2025",index:"02",role:"Data / ML Engineer",company:"DATAFAB × Kering",location:"Paris",text:"Pipeline ML sur GCP pour le forecasting et la détection d’anomalies e-commerce.",tags:["GCP","Vertex AI","BigQuery","dbt","Airbyte","LSTM"],metric:"ML Platform",details:["Pipelines de collecte et transformation","Forecasting Prophet / LSTM","Automatisation entraînement et prédiction","Orchestration Vertex AI / Cloud Composer"]},
   {slug:"ecam",period:"2024",index:"03",role:"Data Scientist",company:"ECAM",location:"Rennes",text:"Computer Vision pour la reconnaissance de feuilles de parties d’échecs manuscrites.",tags:["Python","OpenCV","ResNet","Deep Learning"],metric:"Computer Vision",details:["Traitement et segmentation d’images","Dataset de plus de 500 images","Fine-tuning d’un ResNet","Pipeline de retranscription automatisée"]}
 ];
@@ -17,7 +17,7 @@ export default async function Home(){
    <div className="heroVisual heroVisualV3" aria-label="AI systems lifecycle"><div className="orbit o1"/><div className="orbit o2"/><div className="core"><span>AI</span><small>SYSTEMS</small></div><div className="node n1">DATA</div><div className="node n2">MODEL</div><div className="node n3">EVAL</div><div className="node n4">SHIP</div></div>
   </section>
 
-  <section className="strip"><span className="stripLabel">CURRENT STACK</span>{["Python","LangGraph","GCP","Vertex AI","Docker","FastAPI","TypeScript","Next.js"].map(x=><span key={x}>{x}</span>)}</section>
+  <section className="strip"><span className="stripLabel">CURRENT STACK</span>{["Python","LangGraph","MCP","GCP","Vertex AI","Docker","FastAPI","Gemini"].map(x=><span key={x}>{x}</span>)}</section>
 
   <section id="experience" className="section"><header><div><span>01 / SELECTED WORK</span><small>2024 — 2026</small></div><h2>Expériences qui relient<br/><em>modèles et systèmes.</em></h2></header>
    <div className="workList">{homeExperiences.map(e=><a className="work" key={e.slug} href={"/experience/"+e.slug}><div className="workIndex">{e.index}</div><div className="workMain"><div className="workTop"><p>{e.company} · {e.location}</p><span>{e.period}</span></div><h3>{e.role}</h3><p className="workDesc">{e.text}</p><ul>{e.details.map(d=><li key={d}>{d}</li>)}</ul><div className="tags">{e.tags.map(t=><span key={t}>{t}</span>)}</div></div><div className="workSide"><span>{e.metric}</span><b>↗</b></div></a>)}</div>
