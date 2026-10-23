@@ -2,20 +2,20 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Elie Sanon — ML / AI Engineer",
-  description: "ML / AI Engineer spécialisé en Machine Learning, Deep Learning, systèmes agentiques et ML Engineering sur GCP.",
+  title: "Elie Sanon — AI Engineer | Applied AI & Agentic Systems",
+  description: "AI Engineer spécialisé en Applied AI, systèmes agentiques, RAG et automatisation — du problème concret au système fiable et déployable.",
   authors: [{ name: "Elie Sanon" }],
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Elie Sanon — ML / AI Engineer",
-    description: "Machine Learning, Agentic AI, ML Engineering et recherche appliquée — de l’expérimentation au déploiement.",
+    title: "Elie Sanon — AI Engineer | Applied AI & Agentic Systems",
+    description: "Applied AI, Agentic Systems, RAG et AI Automation — conception, évaluation et mise en production.",
     type: "website",
     locale: "fr_FR",
   },
   twitter: {
     card: "summary",
-    title: "Elie Sanon — ML / AI Engineer",
-    description: "Machine Learning, Agentic AI, ML Engineering et recherche appliquée.",
+    title: "Elie Sanon — AI Engineer | Applied AI & Agentic Systems",
+    description: "Applied AI, Agentic Systems, RAG et AI Automation.",
   },
 };
 
