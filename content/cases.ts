@@ -137,7 +137,7 @@ export const experiences: CaseStudy[] = [
     sections: [
       { title: "Contexte", blocks: [{ type: "p", text: "Construction d'une chaîne ML cloud pour exploiter les données e-commerce, produire des prévisions et détecter automatiquement des comportements anormaux." }] },
       { title: "Data Engineering", blocks: [{ type: "list", items: ["Ingestion des données avec Airbyte.", "Transformation et modélisation SQL avec dbt.", "Centralisation des données analytiques dans BigQuery."] }] },
-      { title: "Machine Learning", blocks: [{ type: "list", items: ["Modèles de forecasting Prophet et LSTM.", "Détection d'anomalies sur les séries e-commerce.", "Automatisation des étapes d'entraînement et de prédiction."] }] },
+      { title: "Machine Learning", blocks: [{ type: "list", items: ["Entraînement et évaluation de modèles Prophet et LSTM.", "Détection d'anomalies sur les séries e-commerce : 80 % des anomalies de ventes trouvées.", "Déploiement des entraînements sur Vertex AI (Training), orchestrés avec Cloud Composer."] }] },
       { title: "Industrialisation", blocks: [{ type: "p", text: "Déploiement des composants ML avec Vertex AI et orchestration des traitements via Cloud Composer, avec BigQuery comme composant central de la plateforme data." }] },
       { title: "Lecture ML Engineering", blocks: [{ type: "p", text: "Le projet illustre une approche où le modèle n'est qu'un composant d'un système plus large : qualité des données, transformations reproductibles, orchestration et exécution cloud conditionnent aussi la valeur du ML." }] },
     ],
