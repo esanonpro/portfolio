@@ -180,8 +180,8 @@ export const fr = {
       {
         company: "ECAM Louis de Broglie", role: "Data Scientist", place: "Rennes", year: "2024", emoji: "♟️",
         summary: "Lecture automatique de feuilles de parties d'échecs manuscrites",
-        detail: "OpenCV, segmentation et ResNet fine-tuné sur 500+ images",
-        stack: "Python · OpenCV · ResNet · Deep Learning", architecture: "ecam", caseStudy: "/experience/ecam",
+        detail: "OpenCV, segmentation et CNN TensorFlow/Keras entraîné sur 30 000 images",
+        stack: "Python · OpenCV · TensorFlow/Keras · CNN", architecture: "ecam", caseStudy: "/experience/ecam",
       },
       {
         company: "Centre Muraz", role: "Stagiaire biostatisticien", place: "Burkina Faso", year: "2021", emoji: "🩺",
