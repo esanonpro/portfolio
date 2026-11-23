@@ -27,6 +27,7 @@ export type Project = {
   repoUrl: string;
   cover: string;
   diagram: string;
+  caption: string;
   mobileFlow: { label: string; highlight?: boolean }[];
   flip?: boolean;
 };
@@ -78,7 +79,7 @@ export const fr = {
     title: "Projets",
     emoji: "🚀",
     intro:
-      "Deux projets menés de bout en bout, de la collecte des données au résultat livré. Code public et architecture documentée.",
+      "Trois projets menés de bout en bout, de la collecte des données au résultat livré. Code public et architecture documentée.",
     items: [
       {
         id: "job-hunter",
@@ -99,6 +100,7 @@ export const fr = {
         repoUrl: "https://github.com/esanonpro/ai-job-hunter-agent",
         cover: "/img/jobhunter.webp",
         diagram: "jh",
+        caption: "Pipeline Job Hunter",
         mobileFlow: [
           { label: "Sources multiples" }, { label: "Collecte + déduplication" },
           { label: "Analyse Gemini", highlight: true }, { label: "Notification" },
@@ -123,10 +125,36 @@ export const fr = {
         repoUrl: "https://github.com/esanonpro/rag-document-assistant",
         cover: "/img/rag.webp",
         diagram: "rag",
+        caption: "Pipeline RAG",
         flip: true,
         mobileFlow: [
           { label: "Documents" }, { label: "Chunks + embeddings" }, { label: "Index FAISS", highlight: true },
           { label: "Retrieval" }, { label: "LLM + sources" }, { label: "Évaluation RAGAS", highlight: true },
+        ],
+      },
+      {
+        id: "fraud-detection",
+        kicker: "MLOps · Classification déséquilibrée",
+        emoji: "🛡️",
+        title: "Fraud Detection MLOps",
+        description:
+          "Un système de détection de fraude bancaire de bout en bout : moins de 0,2 % des transactions sont frauduleuses, il faut les repérer sans multiplier les fausses alertes.",
+        points: [
+          { emoji: "⚖️", text: "Déséquilibre géré par pondération des classes, recall privilégié" },
+          { emoji: "📈", text: "Expériences suivies dans MLflow, gate qui bloque tout modèle moins bon" },
+          { emoji: "🚀", text: "API FastAPI conteneurisée avec Docker pour Cloud Run" },
+        ],
+        tags: [
+          { label: "Python", icon: "python" }, { label: "scikit-learn", icon: "sklearn" }, { label: "MLflow", icon: "mlflow" },
+          { label: "FastAPI", icon: "fastapi" }, { label: "Docker", icon: "docker" }, { label: "Cloud Run", icon: "gcp" },
+        ],
+        repoUrl: "https://github.com/esanonpro/fraud-detection-mlops",
+        cover: "/img/fraud.webp",
+        diagram: "fraud",
+        caption: "Pipeline MLOps",
+        mobileFlow: [
+          { label: "Transactions déséquilibrées" }, { label: "Prétraitement" }, { label: "Entraînement + MLflow" },
+          { label: "Gate de validation", highlight: true }, { label: "Docker" }, { label: "API sur Cloud Run" },
         ],
       },
     ] as Project[],
@@ -157,8 +185,9 @@ export const fr = {
       },
       {
         company: "Centre Muraz", role: "Biostatisticien", place: "Burkina Faso", year: "2021", emoji: "🩺",
-        summary: "Analyses biostatistiques en recherche en santé",
-        detail: "Premier terrain : la donnée au service de la santé publique", stack: "R · Biostatistique",
+        summary: "Analyse de données de santé publique et modélisation épidémiologique",
+        detail: "Séries temporelles épidémiologiques sous MATLAB, en collaboration avec des doctorants",
+        stack: "R · MATLAB · Biostatistique · Séries temporelles", architecture: "muraz",
       },
     ] as Experience[],
   },

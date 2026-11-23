@@ -65,7 +65,7 @@ export function Projects() {
             </div>
             <TiltFigure>
               <Image className="cover" src={it.cover} alt="" aria-hidden="true" width={1200} height={680} />
-              <figcaption>Pipeline {it.title === "Job Hunter" ? "Job Hunter" : "RAG"}</figcaption>
+              <figcaption>{it.caption}</figcaption>
               <Diagram id={it.diagram} />
               <ol className="flow-m">
                 {it.mobileFlow.map((f) => <li key={f.label} className={f.highlight ? "hl" : undefined}>{f.label}</li>)}
