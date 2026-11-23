@@ -26,12 +26,12 @@ export function Nav() {
   return (
     <header>
       <nav className="nav" aria-label="Navigation principale">
-        <a className="brand" href="#top">Elie Sanon<i aria-hidden="true" /></a>
+        <a className="brand" href="/">Elie Sanon<i aria-hidden="true" /></a>
         <ul className="nav-links">
           {fr.nav.map((l) => <li key={l.href}><a href={l.href}>{l.label}</a></li>)}
         </ul>
         <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-          <a className="btn btn-navline" href="#contact">Contact <ArrowRight /></a>
+          <a className="btn btn-navline" href="/#contact">Contact <ArrowRight /></a>
           <button
             ref={btn}
             className="menu-btn"
