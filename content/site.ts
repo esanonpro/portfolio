@@ -112,11 +112,11 @@ export const fr = {
         emoji: "📚",
         title: "RAG Document Assistant",
         description:
-          "Un assistant qui répond à des questions sur des documents scientifiques en citant les passages utilisés. Les réponses sont évaluées avec RAGAS.",
+          "Un assistant local qui répond à des questions sur des documents scientifiques en citant les passages utilisés, avec un protocole d'évaluation RAGAS reproductible.",
         points: [
           { emoji: "🗂️", text: "Indexation vectorielle FAISS" },
           { emoji: "🧬", text: "Embeddings Sentence Transformers" },
-          { emoji: "📏", text: "API FastAPI et évaluation RAGAS" },
+          { emoji: "📏", text: "API FastAPI et protocole d'évaluation RAGAS" },
         ],
         tags: [
           { label: "Python", icon: "python" }, { label: "FAISS" }, { label: "Sentence Transformers", icon: "hf" },
@@ -141,12 +141,12 @@ export const fr = {
           "Un système de détection de fraude bancaire de bout en bout : moins de 0,2 % des transactions sont frauduleuses, il faut les repérer sans multiplier les fausses alertes.",
         points: [
           { emoji: "⚖️", text: "Déséquilibre géré par pondération des classes, recall privilégié" },
-          { emoji: "📈", text: "Expériences suivies dans MLflow, gate qui bloque tout modèle moins bon" },
-          { emoji: "🚀", text: "API FastAPI conteneurisée avec Docker pour Cloud Run" },
+          { emoji: "📈", text: "Expériences suivies dans MLflow, CI qui réentraîne et bloque tout modèle moins bon" },
+          { emoji: "🚀", text: "API FastAPI conteneurisée avec Docker, prête pour Cloud Run" },
         ],
         tags: [
           { label: "Python", icon: "python" }, { label: "scikit-learn", icon: "sklearn" }, { label: "MLflow", icon: "mlflow" },
-          { label: "FastAPI", icon: "fastapi" }, { label: "Docker", icon: "docker" }, { label: "Cloud Run", icon: "gcp" },
+          { label: "FastAPI", icon: "fastapi" }, { label: "Docker", icon: "docker" }, { label: "GitHub Actions", icon: "gha" },
         ],
         repoUrl: "https://github.com/esanonpro/fraud-detection-mlops",
         cover: "/img/fraud.webp",
@@ -154,7 +154,7 @@ export const fr = {
         caption: "Pipeline MLOps",
         mobileFlow: [
           { label: "Transactions déséquilibrées" }, { label: "Prétraitement" }, { label: "Entraînement + MLflow" },
-          { label: "Gate de validation", highlight: true }, { label: "Docker" }, { label: "API sur Cloud Run" },
+          { label: "Gate de validation (CI)", highlight: true }, { label: "Docker" }, { label: "API FastAPI" },
         ],
       },
     ] as Project[],
