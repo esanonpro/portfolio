@@ -163,6 +163,44 @@ export const experiences: CaseStudy[] = [
       { title: "Perspective", blocks: [{ type: "p", text: "Ce projet relie vision par ordinateur classique et Deep Learning dans une chaîne complète, depuis le document brut jusqu'à une sortie structurée." }] },
     ],
   },
+  {
+    slug: "muraz",
+    kind: "experience",
+    index: "04",
+    eyebrow: "04 / Étude de cas · 2021",
+    titleTop: "Stagiaire biostatisticien",
+    titleAccent: "Centre Muraz",
+    intro:
+      "Étude de l'impact de la COVID-19 sur les services de santé au Burkina Faso et appui à des projets de recherche sanitaire, de juin à décembre 2021.",
+    tags: [{ label: "R" }, { label: "DHIS2" }, { label: "KoboToolbox" }, { label: "Cartographie" }, { label: "Biostatistique" }],
+    badge: { label: "Santé publique", title: "Impact de la COVID-19", sub: "Données DHIS2 · 2021" },
+    contribution:
+      "Étude statistique de la fréquentation des services de santé · indicateurs sanitaires · comparaison avant / après pandémie · cartographie régionale · questionnaire KoboToolbox.",
+    diagram: {
+      id: "muraz",
+      kicker: "02 / Démarche",
+      title: "Des données de routine aux ",
+      accent: "constats régionaux",
+      text:
+        "Les données de consultations et d'hospitalisations issues de DHIS2 deviennent des indicateurs comparables avant et après la pandémie, puis une lecture géographique des écarts, discutée avec les médecins.",
+      outputs: ["Indicateurs sanitaires", "Comparaison avant / après", "Cartes des disparités"],
+    },
+    meta: [
+      { label: "Rôle", value: "Stagiaire biostatisticien" }, { label: "Lieu", value: "Burkina Faso" },
+      { label: "Période", value: "Juin – décembre 2021" }, { label: "Focus", value: "Santé publique" },
+    ],
+    sections: [
+      { title: "Contexte", blocks: [{ type: "p", text: "La pandémie de COVID-19 a pu modifier le recours aux soins. L'étude cherchait à mesurer son impact sur la fréquentation des services de santé, en parallèle d'un appui à d'autres projets de recherche sanitaire du Centre Muraz." }] },
+      { title: "Données", blocks: [{ type: "p", text: "Les analyses reposent sur les données de consultations et d'hospitalisations issues de DHIS2, le système d'information sanitaire utilisé pour le suivi des activités des formations sanitaires." }] },
+      { title: "Analyses", blocks: [{ type: "list", items: [
+        "Production et analyse d'indicateurs sanitaires de fréquentation.",
+        "Comparaison des évolutions avant et après le début de la pandémie.",
+        "Cartographie des disparités régionales.",
+      ] }] },
+      { title: "Enquête", blocks: [{ type: "p", text: "Contribution à la conception d'un questionnaire d'enquête sur l'utilisation des méthodes contraceptives par les étudiants, avec KoboToolbox." }] },
+      { title: "Collaboration", blocks: [{ type: "p", text: "Travail avec des médecins pour définir les analyses pertinentes et présenter les résultats, en traduisant les questions de santé publique en indicateurs mesurables." }] },
+    ],
+  },
 ];
 
 export const researchIndex = {
