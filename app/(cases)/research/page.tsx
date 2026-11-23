@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getHomeContent } from "../../sanity/lib/content";
+import { getHomeContent } from "../../../sanity/lib/content";
 
 const works = [
   {
