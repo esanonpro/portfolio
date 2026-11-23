@@ -56,7 +56,12 @@ export const experiences: CaseStudy[] = [
       { label: "Gemini", icon: "gemini" }, { label: "Vertex AI", icon: "gcp" }, { label: "FastAPI", icon: "fastapi" },
       { label: "Cloud Run", icon: "gcp" },
     ],
-    badge: { label: "Système", title: "Moteur de décision hybride", sub: "IA + règles déterministes" },
+    badge: { label: "Système", title: "10 paires analysées / heure", sub: "Analyse 100 % automatisée" },
+    metrics: [
+      { label: "Paires de devises", value: "10", note: "analysées chaque heure" },
+      { label: "Automatisation", value: "100 %", note: "des analyses, sans intervention manuelle" },
+      { label: "Agent LLM", value: "1", note: "fondamental, + moteur technique déterministe" },
+    ],
     contribution:
       "Architecture du workflow hybride · moteur technique · agent fondamental Gemini · intégration MCP · orchestration LangGraph · backtesting · API et déploiement GCP.",
     diagram: {
@@ -110,7 +115,12 @@ export const experiences: CaseStudy[] = [
       { label: "GCP", icon: "gcp" }, { label: "Vertex AI", icon: "gcp" }, { label: "BigQuery", icon: "bigquery" },
       { label: "Cloud Composer", icon: "gcp" }, { label: "dbt" }, { label: "Airbyte", icon: "airbyte" }, { label: "LSTM" },
     ],
-    badge: { label: "Plateforme", title: "Pipeline ML", sub: "GCP · e-commerce" },
+    badge: { label: "Résultat", title: "80 % des anomalies trouvées", sub: "Prophet · LSTM · GCP" },
+    metrics: [
+      { label: "Anomalies", value: "80 %", note: "des anomalies de ventes trouvées" },
+      { label: "Volume", value: "Millions", note: "d'enregistrements de ventes traités" },
+      { label: "Modèles", value: "2", note: "Prophet et LSTM comparés" },
+    ],
     contribution: "Ingestion et transformation · forecasting Prophet / LSTM · détection d'anomalies · automatisation ML · orchestration GCP.",
     diagram: {
       id: "ker",
@@ -141,7 +151,12 @@ export const experiences: CaseStudy[] = [
     titleAccent: "ECAM Rennes",
     intro: "Computer Vision pour la reconnaissance automatique de feuilles de parties d'échecs manuscrites.",
     tags: [{ label: "Python", icon: "python" }, { label: "OpenCV", icon: "opencv" }, { label: "TensorFlow/Keras" }, { label: "CNN" }],
-    badge: { label: "Vision", title: "Image → données", sub: "30 000 images" },
+    badge: { label: "Résultat", title: "90 % de taux de détection", sub: "CNN · 30 000 images" },
+    metrics: [
+      { label: "Détection", value: "90 %", note: "taux de détection du modèle" },
+      { label: "Dataset", value: "30 000", note: "images dans le jeu de données" },
+      { label: "Modèle", value: "CNN", note: "TensorFlow/Keras + post-traitement" },
+    ],
     contribution: "Prétraitement OpenCV · segmentation · dataset de 30 000 images · CNN TensorFlow/Keras · évaluation · post-traitement de la transcription.",
     diagram: {
       id: "ecam",
