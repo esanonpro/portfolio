@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { fr } from "@/content/site";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Sections";
 import "./globals.css";
 
 // Polices auto-hébergées (aucun appel à Google Fonts : plus rapide et conforme RGPD)
@@ -23,7 +25,8 @@ const dmSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: fr.meta.title,
+  metadataBase: new URL("https://eliesanon.vercel.app"),
+  title: { default: fr.meta.title, template: "%s — Elie Sanon" },
   description: fr.meta.description,
   openGraph: { title: fr.meta.title, description: fr.meta.description, locale: "fr_FR", type: "website" },
 };
@@ -33,7 +36,12 @@ export const viewport: Viewport = { themeColor: "#0A1840" };
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${montserrat.variable} ${dmSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <a className="skip" href="#main">Aller au contenu</a>
+        <Nav />
+        <main id="main">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

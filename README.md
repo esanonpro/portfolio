@@ -2,8 +2,8 @@
 
 Site vitrine : Next.js 16 (App Router), TypeScript, Motion, Three.js, CMS Sanity pour les études de cas.
 
-- `app/(home)` : page d'accueil (design Alteca, effets 3D).
-- `app/(cases)` : études de cas (`/experience/*`), recherche (`/research/*`) et studio Sanity (`/studio`), avec leur propre mise en page.
+- `app/(site)` : accueil, études de cas (`/experience/[slug]`) et recherche (`/research`, `/research/[slug]`), même design.
+- `app/(studio)` : studio Sanity (`/studio`).
 
 ## Lancer en local
 
@@ -21,8 +21,9 @@ Les schémas (pipelines et architectures) sont dans `content/diagrams.ts`.
 | Pour… | Fichier |
 |---|---|
 | Textes, liens, projets, expériences | `content/site.ts` |
+| Études de cas et travaux de recherche | `content/cases.ts` |
 | Schémas SVG | `content/diagrams.ts` |
-| Styles (couleurs, espacements, effets) | `app/(home)/globals.css` (variables en haut du fichier) |
+| Styles (couleurs, espacements, effets) | `app/(site)/globals.css` (variables en haut du fichier) |
 | Scène 3D du haut de page | `components/HeroScene.tsx` |
 | Images | `public/img/` |
 | Logos des technos (Simple Icons, CC0) | `public/icons.svg` |

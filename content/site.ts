@@ -56,9 +56,9 @@ export const fr = {
   },
   links: { cv: CV_URL, github: GITHUB_URL, linkedin: LINKEDIN_URL, research: "/research" },
   nav: [
-    { href: "#projets", label: "Projets" },
-    { href: "#experiences", label: "Expériences" },
-    { href: "#recherche", label: "Recherche & formation" },
+    { href: "/#projets", label: "Projets" },
+    { href: "/#experiences", label: "Expériences" },
+    { href: "/#recherche", label: "Recherche & formation" },
   ],
   hero: {
     eyebrow: "AI Engineer · Disponible en France",
