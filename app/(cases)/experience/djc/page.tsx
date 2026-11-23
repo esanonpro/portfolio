@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { getExperienceBySlug } from "../../../sanity/lib/content";
+import { getExperienceBySlug } from "../../../../sanity/lib/content";
 
 export default async function Page(){
  const cms=await getExperienceBySlug("djc");
  return <main className="casePage">
-  <nav><Link className="brand" href="/">ES<span>.</span></Link><Link className="back" href="/#experience">← Retour</Link></nav>
+  <nav><Link className="brand" href="/">ES<span>.</span></Link><Link className="back" href="/#experiences">← Retour</Link></nav>
   <section className="caseHero djcHero"><div><div className="eyebrow">01 / CASE STUDY · 2026</div><h1>AI Engineer<br/><em>Diaspora Junior Consulting.</em></h1><p>{cms?.detailIntro || "Système d’aide à la décision sur le marché Forex combinant un moteur technique déterministe et un unique agent LLM d’analyse fondamentale, orchestrés dans un workflow LangGraph industrialisé sur GCP."}</p><div className="caseTags"><span>Python</span><span>LangGraph</span><span>MCP</span><span>Gemini</span><span>Vertex AI</span><span>FastAPI</span><span>Cloud Run</span></div></div><div className="djcStatus"><small>SYSTEM</small><b>HYBRID AI DECISION ENGINE</b><span><i/> CASE STUDY</span></div></section>
   <section className="contributionBand"><span>MY CONTRIBUTION</span><p>{cms?.contribution || "Architecture du workflow hybride · moteur technique · agent fondamental Gemini · intégration MCP · orchestration LangGraph · backtesting · API & déploiement GCP."}</p></section>
   <section className="archSection"><div className="archHead"><div><span>02 / SYSTEM ARCHITECTURE</span><h2>Du signal brut à la<br/><em>décision orchestrée.</em></h2></div><p>Deux flux convergent dans LangGraph : une analyse technique déterministe et un unique agent LLM d’analyse fondamentale. MCP standardise l’accès de l’agent aux outils et données macro-financières.</p></div><div className="architecture">
