@@ -168,19 +168,19 @@ export const fr = {
       {
         company: "Diaspora Junior Consulting", role: "AI Engineer", place: "Paris", year: "2026", emoji: "🤖",
         summary: "Système hybride d'aide à la décision sur le marché Forex",
-        detail: "Moteur technique déterministe + agent LLM fondamental, orchestrés par LangGraph",
+        detail: "10 paires de devises analysées chaque heure, analyse 100 % automatisée",
         stack: "LangGraph · MCP · Gemini · FastAPI · Cloud Run · BigQuery", architecture: "djc", caseStudy: "/experience/djc",
       },
       {
         company: "DATAFAB × Kering", role: "Data / ML Engineer", place: "Paris", year: "2025", emoji: "🛍️",
         summary: "Forecasting et détection d'anomalies e-commerce sur GCP",
-        detail: "De l'ingestion à l'orchestration des modèles Prophet et LSTM",
+        detail: "Prophet et LSTM sur GCP : 80 % des anomalies de ventes trouvées",
         stack: "Airbyte · BigQuery · dbt · Vertex AI · Cloud Composer", architecture: "ker", caseStudy: "/experience/datafab",
       },
       {
         company: "ECAM Louis de Broglie", role: "Data Scientist", place: "Rennes", year: "2024", emoji: "♟️",
         summary: "Lecture automatique de feuilles de parties d'échecs manuscrites",
-        detail: "OpenCV, segmentation et CNN TensorFlow/Keras entraîné sur 30 000 images",
+        detail: "CNN TensorFlow/Keras sur 30 000 images : 90 % de taux de détection",
         stack: "Python · OpenCV · TensorFlow/Keras · CNN", architecture: "ecam", caseStudy: "/experience/ecam",
       },
       {
