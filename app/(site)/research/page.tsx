@@ -3,7 +3,7 @@ import Link from "next/link";
 import { research, researchIndex as r } from "@/content/cases";
 import { ArrowRight } from "@/components/Icon";
 
-export const metadata: Metadata = { title: "Recherche", description: r.intro };
+export const metadata: Metadata = { title: "Recherche", description: r.intro, alternates: { canonical: "/research" }, openGraph: { title: "Recherche — Elie Sanon", description: r.intro, url: "/research", images: ["/og.png"] }, twitter: { card: "summary_large_image", title: "Recherche — Elie Sanon", description: r.intro, images: ["/og.png"] } };
 
 export default function ResearchIndex() {
   return (

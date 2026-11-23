@@ -11,7 +11,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/experience/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const c = experiences.find((e) => e.slug === slug);
-  return c ? { title: `${c.titleTop} · ${c.titleAccent}`, description: c.intro } : {};
+  return c ? { title: `${c.titleTop} · ${c.titleAccent}`, description: c.intro, alternates: { canonical: `/experience/${slug}` }, openGraph: { title: c.titleTop + " " + c.titleAccent, description: c.intro, url: `/experience/${slug}`, type: "article", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Elie Sanon — AI Engineer" }] }, twitter: { card: "summary_large_image", title: c.titleTop + " " + c.titleAccent, description: c.intro, images: ["/og.png"] } } : {};
 }
 
 export default async function ExperiencePage({ params }: PageProps<"/experience/[slug]">) {
