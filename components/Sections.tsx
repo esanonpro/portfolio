@@ -46,26 +46,26 @@ export function Projects() {
     <section className="block light" id="projets">
       <div className="wrap">
         <div className="sec-head">
-          <h2>{p.title} <span className="emo"><Emoji>{p.emoji}</Emoji></span></h2>
+          <h2>{p.title}</h2>
           <p>{p.intro}</p>
         </div>
         {p.items.map((it) => (
           <article className={`project${it.flip ? " flip" : ""}`} key={it.id}>
             <div>
-              <p className="kicker"><Emoji>{it.emoji}</Emoji> {it.kicker}</p>
+              <p className="kicker">{it.kicker}</p>
               <h3>{it.title}</h3>
               <p>{it.description}</p>
               <ul className="points">
-                {it.points.map((pt) => <li key={pt.text}><Emoji>{pt.emoji}</Emoji> {pt.text}</li>)}
+                {it.points.map((pt) => <li key={pt.text}>{pt.text}</li>)}
               </ul>
               <div className="tags">
-                {it.tags.map((t) => <span className="tag" key={t.label}>{t.icon && <Icon name={t.icon} brand />}{t.label}</span>)}
+                {it.tags.map((t) => <span className="tag" key={t.label}>{t.icon && <Icon name={t.icon} />}{t.label}</span>)}
               </div>
               <a className="btn btn-indigo" href={it.repoUrl}>Voir le dépôt <ArrowRight /></a>
             </div>
             <TiltFigure>
               <Image className="cover" src={it.cover} alt="" aria-hidden="true" width={1200} height={680} />
-              <figcaption><Emoji>⚙️</Emoji> Pipeline {it.title === "Job Hunter" ? "Job Hunter" : "RAG"}</figcaption>
+              <figcaption>Pipeline {it.title === "Job Hunter" ? "Job Hunter" : "RAG"}</figcaption>
               <Diagram id={it.diagram} />
               <ol className="flow-m">
                 {it.mobileFlow.map((f) => <li key={f.label} className={f.highlight ? "hl" : undefined}>{f.label}</li>)}
